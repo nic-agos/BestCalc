@@ -1,0 +1,12 @@
+language: java
+jdk:
+- openjdk14
+
+addons:
+  sonarcloud:
+    organization: "nic-agos"
+    token: "3d867858ddc27388bc1e1cbffab9183254a35520"
+
+script:
+- ant build
+- sonar-scanner
